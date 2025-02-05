@@ -1,0 +1,19 @@
+name: Unconventional commits
+description: Commit messages for humans
+branding:
+  icon: edit
+  color: lightblue
+runs:
+  using: composite
+  steps:
+    - name: Ensure commits are not conventional
+      env:
+        COMMIT_MESSAGES: ${{ toJSON(github.event.commits.*.message) }}
+      shell: bash
+      run: |
+        while IFS= read -r line; do
+          if [[ "$line" =~ ^[[:alnum:]]+(\(.*\))?'!'?:' '.+ ]]; then
+            echo -e "Found conventional commit:\n$line"
+            exit 1
+          fi
+        done <<< $(echo $COMMIT_MESSAGES | jq -r '.[]')      
