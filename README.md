@@ -7,6 +7,10 @@ This is a Github Action that fails the build if the commits are written using [C
 ## Usage
 
 ```yml
+name: My workflow
+
+on: [push]
+
 jobs:
   my-job:
     runs-on: ubuntu-latest
