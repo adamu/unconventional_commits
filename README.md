@@ -14,6 +14,16 @@ jobs:
     - uses: adamu/unconventional_commits@v1
 ```
 
+## Example failure
+
+```
+Run adamu/unconventional_commits@v1
+...
+Found conventional commit:
+chore: rewrite the core logic and add some bugs
+Error: Process completed with exit code 1.
+```
+
 ## Why
 
 Conventional commits are busywork, obfuscate the commit log, and suck the joy out of the creative process.
