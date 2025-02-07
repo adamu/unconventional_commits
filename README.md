@@ -20,13 +20,7 @@ jobs:
 
 ## Example failure
 
-```
-Run adamu/unconventional_commits@v1
-...
-Found conventional commit:
-chore: rewrite the core logic and add some bugs
-Error: Process completed with exit code 1.
-```
+<img width="429" alt="image" src="https://github.com/user-attachments/assets/39d51c05-325b-4554-b035-92743365b14c" />
 
 ## Why
 
